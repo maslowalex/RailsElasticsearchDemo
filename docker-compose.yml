@@ -18,6 +18,8 @@ services:
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/app
+      - bundler-data:/usr/local/bundle/:cached
+      - bin-data:/usr/local/bin/:cached
     ports:
       - "3000:3000"
     depends_on:
@@ -26,3 +28,5 @@ services:
 volumes:
   esdata1:
     driver: local
+  bundler-data:
+  bin-data:
