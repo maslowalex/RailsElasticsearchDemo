@@ -8,8 +8,6 @@ up:
 rails-c:
 	${DOCKER_COMPOSE} run --rm web bundle exec rails c
 
-
-
 migrate:
 	${DOCKER_COMPOSE} run --rm web bundle exec rails db:migrate
 
