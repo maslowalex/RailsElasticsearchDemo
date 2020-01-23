@@ -1,0 +1,1 @@
+$reids = Redis.new(url: "redis:6379")
