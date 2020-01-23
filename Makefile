@@ -11,5 +11,8 @@ rails-c:
 migrate:
 	${DOCKER_COMPOSE} run --rm web bundle exec rails db:migrate
 
+db-create:
+	${DOCKER_COMPOSE} run --rm web bundle exec rails db:create
+
 bash:
 	${DOCKER_COMPOSE} run --rm web bash

@@ -6,17 +6,17 @@ RUN echo 'deb http://dl.yarnpkg.com/debian/ stable main' > /etc/apt/sources.list
 
 RUN apt-get update && apt-get install -qq -y --no-install-recommends \
       build-essential libpq-dev curl postgresql-client
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update && apt-get install -qq -y --no-install-recommends nodejs yarn
 
-RUN mkdir /app
-WORKDIR /app
-COPY Gemfile /app/Gemfile
-COPY Gemfile.lock /app/Gemfile.lock
+RUN mkdir /elastic_example
+WORKDIR /elastic_example
+COPY Gemfile /elastic_example/Gemfile
+COPY Gemfile.lock /elastic_example/Gemfile.lock
 RUN bundle install
 
 RUN bundle exec rails webpacker:install
-COPY . /app
+COPY . /elastic_example
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/

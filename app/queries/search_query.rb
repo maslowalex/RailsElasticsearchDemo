@@ -1,0 +1,2 @@
+class SearchQuery
+end
