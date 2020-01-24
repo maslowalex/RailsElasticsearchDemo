@@ -1,24 +1,14 @@
-# README
+# Dockerized Rails 6
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example Rails 6 app on Docker. The purpose of this repo is to learn more about Docker, Docker-compose and Elasticsearch.
+If you are so brave and you want to try it out:
 
-Things you may want to cover:
+- pull this repo to your local machine
+- run `docker-compose up --build`
+- `make db-create` and `make db-migrate`
+- `make bash` and than whithin container `bundle exec rake import_chars` to import Rick and Morty characters from API and populate to DB and Elasticsearch
 
-* Ruby version
+For testing inside docker:
+- `make test-provision`
+- `make rspec`
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
