@@ -10,7 +10,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update && apt-get install -qq -y --no-install-recommends nodejs yarn
 
 RUN mkdir /elastic_example
-WORKDIR /elastic_example/app
+WORKDIR /elastic_example/
 COPY Gemfile /elastic_example/Gemfile
 COPY Gemfile.lock /elastic_example/Gemfile.lock
 RUN bundle install

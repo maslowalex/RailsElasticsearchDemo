@@ -18,7 +18,7 @@ services:
   web:
     build: .
     volumes:
-      - .:/app
+      - .:/elastic_example
       - bundler-data:/usr/local/bundle/:cached
       - bin-data:/usr/local/bin/:cached
     ports:

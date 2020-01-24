@@ -33,6 +33,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
   gem 'elasticsearch-extensions'
+  gem 'database_cleaner-active_record'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
